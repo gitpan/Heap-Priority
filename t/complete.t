@@ -4,7 +4,9 @@
 
 ######################### We start with some black magic to print on failure.
 
-BEGIN { $| = 1; print "1..1\n"; }
+use Test;
+
+BEGIN { $| = 1; plan tests => 10504; }
 END {print "not ok 1\n" unless $loaded;}
 use Heap::Priority;
 $loaded = 1;
@@ -12,14 +14,8 @@ ok(1);
 
 ######################### End of black magic.
 
-use Test;
 use strict;
 my ($h, $sv, @av);
-$|++;
-
-BEGIN { plan tests => 10505 }
-use Heap::Priority;
-ok(1);
 
 sub compare_arrays {
     my ($first, $second) = @_;

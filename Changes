@@ -9,4 +9,6 @@ Revision history for Perl extension Heap::Priority.
 	- Rewritten essentially from scratch
 	- Much faster and more flexible
 	
-
+0.11  Wed Dec  4 06:41:57 2002 
+	- Tests fixed to use Test more strictly 
+	  (was mixing metaphors)

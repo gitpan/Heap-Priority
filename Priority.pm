@@ -16,7 +16,7 @@ require Exporter;
 
 @ISA = qw (AutoLoader);
 @EXPORT = qw ();
-$VERSION = "0.10";
+$VERSION = "0.11";
 
 sub new {
     
