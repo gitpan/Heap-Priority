@@ -1,0 +1,36 @@
+Heap::Priority module: Implements a priority queue or stack
+
+This module implements a priority queue or stack, referred to as a
+'priority list' or 'priority heap'. The main functions are add() and
+pop() which add and remove from the priority list according to the
+rules you choose. Typically, items are add()ed with a priority level
+which will affect the order in which pop() will produce them.
+
+What happens when you call pop() depends on the configuration you
+choose. By default the highest priority items will be popped off in
+First-In-First-Out order. It is also possible to have pop() produce
+lowest priority items first, and/or in a Last-In-First-Out order.
+
+The internal data storage representation was chosen to maximize speed
+for "usual" operations, while minimizing memory usage. List
+modification outside of add() and pop() might be slow; in particular,
+deleting an item completely from the list will require visiting every
+item on the list.
+
+The representation is efficient for very large numbers of items,
+regardless of the number of distinct priority levels.
+
+For more details, please see the embedded POD-format documentation.
+
+Heap::Priority requires Heap 0.50 or higher.
+
+As of 0.10, Heap::Priority is being maintained by Frank J. Wojcik
+<fwojcik+pri@besh.com>. It is almost 100% compatible with the
+previous release, 0.01. The major difference is that modify_priority()
+does not exist, but it can be emulated. See the documentation for
+details.
+
+Copyright (c) 2002 Frank J. Wojcik. All rights reserved.
+
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
